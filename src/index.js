@@ -1,8 +1,8 @@
 const container = document.querySelector('.colleges');
 
-
 const renderColleges = async () => {
   let uri = 'http://localhost:3000/colleges?_sort=likes&_order=desc';
+
 
   //need to fix, change to then
   const res = await fetch(uri);
@@ -12,18 +12,15 @@ const renderColleges = async () => {
   colleges.forEach(colleges => {
     template += `
     <div class="colleges">
-      <h2>${colleges.name}</h2>
+    </div>  <h2>${colleges.name}</h2>
       <p><small>${colleges.likes} likes</small></p>
       <p>${colleges.description}</p>
       <img src="${colleges.imageUrl}">
-        `
-   
-  })
+       `
+   })
 
   container.innerHTML = template;
 }
-window.addEventListener('DOMContentLoaded', () => renderColleges()); //need to fix//
-
 
 //create more Colleges posts
 
@@ -41,14 +38,43 @@ const createColleges = async (e) => {
   }
   
   //need to fix, change to then
-  await fetch('http://localhost:3000/colleges', {
+  //await fetch('http://localhost:3000/colleges', {
+   fetch('http://localhost:3000/colleges', {
     method: 'POST',
     body: JSON.stringify(doc),
     headers: { 'Content-Type': 'application/json' }
   })
+  }
 
-// : causing page refresh-- window.location.replace('index.html')
-}
 
+
+  //LIKES
+
+  function likes(e) {
+    e.preventDefault()
+    let more = parseInt(e.target.previousElementSibling.innerText) + 1
+  
+    fetch(`http://localhost:3000/colleges/${e.target.id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(doc),
+      headers: { 'Content-Type': 'application/json' }
+      })
+      .then(res => res.json())
+      .then((likes_obj => {
+       e.target.previousElementSibling.innerText = `${more} likes`;
+      }))
+  
+    }
+  
+
+//Event Listener 3 (add new colleges created with the form on the data)
 form.addEventListener('submit', createColleges);
+
+
+//Event Listener 2 (render colleges in the page after refresh)
+window.addEventListener('DOMContentLoaded', renderColleges); 
+
+
+  
+
 
