@@ -1,0 +1,25 @@
+{
+  "colleges": [
+    {
+      "id": 1,
+      "name": "LaGuardia Community College",
+      "description": "Lorem Ipsum 1",
+      "likes": 30,
+      "imageUrl": "https://media.gettyimages.com/photos/the-welcome-center-at-laguardia-community-college-stands-in-a-at-the-picture-id107831978?s=612x612"
+    },
+    {
+      "id": 2,
+      "name": "Queensborough Community College",
+      "description": "Lorem Ipsum 2",
+      "likes": 15,
+      "imageUrl": "https://qns.com/wp-content/uploads/2019/11/Queensborough.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Kingsborough Community College",
+      "description": "Lorem Ipsum 3",
+      "likes": 4,
+      "imageUrl": "https://www.kbcc.cuny.edu/faculty/images/Kingsborough-Community-College-On-Stage-At-Kingsborough-Brooklyn-NYC-Untapped-Cities-SusanXu8.jpg"
+    }
+  ]
+}
