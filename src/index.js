@@ -16,7 +16,8 @@ const renderColleges = async () => {
       <p><small>${colleges.likes} likes</small></p>
       <p>${colleges.description}</p>
       <img src="${colleges.imageUrl}">
-       `
+      <button class="likes" id="likes">Likes ❤️</button>
+        `
    })
 
   container.innerHTML = template;
@@ -73,6 +74,8 @@ form.addEventListener('submit', createColleges);
 
 //Event Listener 2 (render colleges in the page after refresh)
 window.addEventListener('DOMContentLoaded', renderColleges); 
+
+
 
 
   
