@@ -23,6 +23,7 @@ function renderAllColleges() {
       template.querySelector('#likes-btn').addEventListener('click', () => {
         colleges.likes+= 1
         template.querySelector('span').textContent = colleges.likes
+        //should add code fetch to keep this updated after refresh
       })
 
   //Add list to DOM
