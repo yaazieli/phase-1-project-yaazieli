@@ -20,13 +20,6 @@
       "description": "Lorem Ipsum 3",
       "likes": 4,
       "imageUrl": "https://www.kbcc.cuny.edu/faculty/images/Kingsborough-Community-College-On-Stage-At-Kingsborough-Brooklyn-NYC-Untapped-Cities-SusanXu8.jpg"
-    },
-    {
-      "name": "erg",
-      "description": "eqrg",
-      "likes": 0,
-      "imageUrl": "https://www.laguardia.edu/redesign-2015/images/logo-laguardia-community-college.svg",
-      "id": 4
     }
   ]
 }

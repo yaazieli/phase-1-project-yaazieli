@@ -9,18 +9,27 @@ function renderAllColleges() {
   
 //DOM render function and adding template for colleges listing
  function renderOneCollege(colleges){
-  let template = document.createElement('li')
+  let template = document.createElement('ol')
   template.className = 'colleges'
   template.innerHTML = `
      <div class="colleges">
-    </div>  <h2>${colleges.name}</h2>
-      <p><small>${colleges.likes} likes</small></p>
+    </div>  <h3>${colleges.name}</h3>
+      <p><span class="likes-count">${colleges.likes} </span> Likes</p>
       <p>${colleges.description}</p>
       <img src="${colleges.imageUrl}">
-      <button class="likes" id="likes">Likes ❤️</button>
-        `
+      <button class="likes" id="likes-btn">Likes ❤️</button>
+      `
+
+      template.querySelector('#likes-btn').addEventListener('click', () => {
+        colleges.likes+= 1
+        template.querySelector('span').textContent = colleges.likes
+      })
+
+  //Add list to DOM
  document.querySelector('.colleges').appendChild(template)
 }
+
+
 
 //Event Listener 1 (render colleges in the page - need to refresh after new ones added with the below form))
 window.addEventListener('DOMContentLoaded', renderAllColleges); 

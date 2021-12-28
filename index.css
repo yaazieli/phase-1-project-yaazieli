@@ -1,0 +1,44 @@
+
+div {
+    padding: 8px;
+  }
+
+  h1 {
+    font-family: "Gill Sans Extrabold", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #484848;
+    font-size: 60px;
+  }
+  
+    h2 {
+    font-family: "Gill Sans Extrabold", sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    color: #484848;
+    font-size: 40px;
+    color: #880000;
+  }
+
+  h3 {
+    text-align: left;
+    text-transform: uppercase;
+    color: #484848;
+  }
+  
+  p {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+  }
+  
+  img {
+    max-width: 500px;
+  }
+
+  /*NOT WORKING*/
+  input [type=text], textarea [name=description], Input [type=url] {
+    display: inline-block;
+  }
+
+ 
